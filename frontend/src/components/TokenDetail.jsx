@@ -18,6 +18,7 @@ const TokenDetail = () => {
   const [purchaseAmount, setPurchaseAmount] = useState('');
   const [cost, setCost] = useState('0');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [account, setAccount] = useState(null); // Track the connected wallet
   const navigate = useNavigate(); 
 
   const tokenDetails = card || {
@@ -34,6 +35,22 @@ const TokenDetail = () => {
   // Constants
   const fundingGoal = 24; 
   const maxSupply = 800000;
+
+  // Connect wallet function
+  const connectWallet = async () => {
+    if (window.ethereum) {
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const accounts = await provider.send('eth_requestAccounts', []);
+      setAccount(accounts[0]); // Set the first account
+    } else {
+      alert('Please install MetaMask!');
+    }
+  };
+
+  // Disconnect wallet function
+  const disconnectWallet = () => {
+    setAccount(null); // Set account to null to disconnect
+  };
 
   useEffect(() => {
     const fetchData = async () => {
