@@ -30,13 +30,13 @@ const TokenCreate = () => {
   return (
     <div className="app">
       <nav className="navbar">
-        <a href="#" className="nav-link">[moralis]</a>
-        <a href="#" className="nav-link">[docs]</a>
+        <a href="https://fun.luvnft.com" className="nav-link">[FUN.]</a>
+        <a href="https://fun.luvnft.com" className="nav-link">[LIVE.]</a>
         <button className="nav-button">[connect wallet]</button>
       </nav>
       <div className="token-create-container">
       <h3 className="start-new-coin" onClick={() => navigate('/')}>[go back]</h3>
-        <p className="info-text">MemeCoin creation fee: 0.0001 ETH</p>
+        <p className="info-text">MemeCoin 🅰️D creation fee: 0.0001 ETH</p>
         <p className="info-text">Max supply: 1 million tokens. Initial mint: 200k tokens.</p>
         <p className="info-text">If funding target of 24 ETH is met, a liquidity pool will be created on Uniswap.</p>
         <div className="input-container">

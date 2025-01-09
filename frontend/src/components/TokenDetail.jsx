@@ -141,8 +141,8 @@ const TokenDetail = () => {
   return (
     <div className="token-detail-container">
       <nav className="navbar">
-        <a href="#" className="nav-link">[moralis]</a>
-        <a href="#" className="nav-link">[docs]</a>
+        <a href="https://fun.luvnft.com" className="nav-link">[FUN.]</a>
+        <a href="https://live.luvnft.com" className="nav-link">[LOVE.]</a>
         <button className="nav-button" onClick={account ? disconnectWallet : connectWallet}>
           {account ? `Connected: ${account.slice(0, 6)}...${account.slice(-4)}` : '[Connect Wallet]'}
         </button>

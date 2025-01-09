@@ -72,14 +72,14 @@ const App = () => {
   return (
     <div className="app">
       <nav className="navbar">
-        <a href="#" className="nav-link">[moralis]</a>
-        <a href="#" className="nav-link">[docs]</a>
+        <a href="http://fun.luvnft.com" className="nav-link">[FUN.]</a>
+        <a href="https://live.luvnft.com" className="nav-link">[LIVE.]</a>
         <button className="nav-button" onClick={account ? disconnectWallet : connectWallet}>
           {account ? `Connected: ${account.slice(0, 6)}...${account.slice(-4)}` : '[Connect Wallet]'}
         </button>
       </nav>
       <div className="card-container">
-        <h3 className="start-new-coin" onClick={() => navigate('/token-create')}>[start a new coin]</h3>
+        <h3 className="start-new-coin" onClick={() => navigate('/token-create')}>[start a new 🅰️D memecoin]</h3>
         <img src="https://pump.fun/_next/image?url=%2Fking-of-the-hill.png&w=256&q=75" alt="Start a new coin" className="start-new-image"/>
         
         {cards.length > 0 && (
